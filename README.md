@@ -19,15 +19,7 @@ Click next and follow the installation steps, database info:
 Now create your super user and add your first website!
 
 ## Almost as quick setup (SSL)
-Request your ssl certificates via Let's Encrypt!:
-
-```bash
-sudo docker run -it --rm -p 443:443 -p 80:80 --name letsencrypt \
-            -v "/etc/letsencrypt:/etc/letsencrypt" \
-            -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \
-            <your-domain>/letsencrypt/letsencrypt:latest auth
-```
-
+Request your ssl certificates via 'Let's Encrypt!' and place the keys in `/etc/letsencrypt/live/<your-domain>/`.
 Replace the `nginx.conf` and `docker-compose.yml` file by those provided in the `ssl` directory.
 
 ```bash
