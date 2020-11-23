@@ -29,6 +29,4 @@ services:
       - db
     environment:
       - MATOMO_DATABASE_HOST=db
-    ports:
-      - 5001:80
     restart: on-failure
