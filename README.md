@@ -28,14 +28,14 @@ sudo docker run -it --rm -p 443:443 -p 80:80 --name letsencrypt \
             <your-domain>/letsencrypt/letsencrypt:latest auth
 ```
 
-Replace the `nginx.conf` and `docker-compose.yaml` file by those provided in the `ssl` directory.
+Replace the `nginx.conf` and `docker-compose.yml` file by those provided in the `ssl` directory.
 
 ```bash
-rm docker-compose.yaml nginx/nginx.conf
-mv ssl/docker-compose.yaml . && mv ssl/nginx.conf nginx
+rm docker-compose.yml nginx/nginx.conf
+mv ssl/docker-compose.yml . && mv ssl/nginx.conf nginx
 ```
 
-Change the website urls in `nginx/nginx.conf` to your host name and set the correct path to your ssl certificate in de `docker-compose.yaml` file (nginx volumes tab). Now you can start your server with docker-compose:
+Change the website urls in `nginx/nginx.conf` to your host name and set the correct path to your ssl certificate in de `docker-compose.yml` file (nginx volumes tab). Now you can start your server with docker-compose:
 
 ```bash
 docker-compose up
