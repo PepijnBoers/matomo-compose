@@ -1,0 +1,18 @@
+mkdir -p letsencrypt
+mkdir -p webroot
+
+docker run -dit --name lets-encrypt-verification-server -p 80:80 -v $PWD/webroot:/usr/local/apache2/htdocs/ httpd:2.4
+
+docker run -it --rm \
+    -v ${PWD}/letsencrypt/:/etc/letsencrypt:z \
+    -v ${PWD}/letsencrypt/:/data/letsencrypt:z \
+    -v ${PWD}/webroot/:/data/webroot:z \
+    certbot/certbot \
+    certonly \
+    --webroot --webroot-path=/data/webroot/ \
+    --cert-name matomo \
+    -d kmeans.tech \
+    --email pepijnbb@gmail.com \
+    --agree-tos
+
+docker stop lets-encrypt-verification-server
