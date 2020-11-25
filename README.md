@@ -18,7 +18,7 @@ mv ssl/docker-compose.yml . && mv ssl/nginx.conf nginx
 Change all occurences of 'example.org' in `nginx/nginx.conf` to your domain name (replace all), and add your domain and email adress to the `init-letsencrypt.sh` file. You can now request your certificates by running the script.
 
 ```bash
-./ssl/init-letsencrypt.sh --domain "kmeans.tech" --email "pepijnbb@gmail.com" --staging
+./ssl/init-letsencrypt.sh
 ```
 
 ### 2. Matomo
