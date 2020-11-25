@@ -11,7 +11,7 @@ _Note: If you want to run matomo without SSL connection skip to step 2_
 If you wish to connect with your Matomo server via an SSL connection, add your domain and email adress to the `init-letsencrypt.sh` file, and request your certificates by running the script. Additionally, replace the `docker-compose.yml` and `nginx/nginx.conf` files with those provided in the ssl directory:
 
 ```bash
-./init-letsencrypt.sh
+./ssl/init-letsencrypt.sh
 rm docker-compose.yml nginx/nginx.conf
 mv ssl/docker-compose.yml . && mv ssl/nginx.conf nginx
 ```
