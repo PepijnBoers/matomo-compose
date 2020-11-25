@@ -1,6 +1,7 @@
 # Dockerized Matomo setup
 Configuration for a dockerized Matomo setup using docker-compose. This docker-compose cofniguration in this repository takes care of your matomo server (incl. SSL connections). The only prerequisites are a working installation of [docker-compose]() and a server that can host your instance of Matomo.
 
+
 In order to establish a secure connection you require an SSL certificate. We use Philipp Schmieder's excellent [nginx cerbot](https://github.com/wmnnd/nginx-certbot) to obtain and maintain our certificates.
 
 ## Installation
