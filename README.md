@@ -1,4 +1,4 @@
-# EASY TO SETUP MATOMO DOCKER-COMPOSE
+# EASY MATOMO DOCKER-COMPOSE SETUP
 Example repository with docker-compose file to quickly start your own Matomo setup. There is a version with and without ssl connection. If you wish to use the ssl connection you require an SSL certificate first. See [Paul Ridgway's blog](https://blockdev.io/quick-and-easy-lets-encrypt-certificates-using-docker/) on how to do so.
 
 ## Quick setup (No SSL)
