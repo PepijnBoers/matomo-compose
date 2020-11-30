@@ -1,5 +1,6 @@
 .DS_Store
 **/.DS_Store
 ssl/certbot/*
-config/backups/backup.tar.gz
-config/backups/db.sql.gz
+**/backup.tar.gz
+**/db.sql.gzi
+set-domain
