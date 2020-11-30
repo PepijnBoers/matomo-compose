@@ -16,6 +16,7 @@ services:
     image: mysql:latest
     volumes:
       - ./setup-db.sql:/docker-entrypoint-initdb.d/setup-db.sql
+      - ./config/infile:/etc/mysql/conf.d
     environment:
       - MYSQL_ROOT_PASSWORD=your_password
     cap_add:
