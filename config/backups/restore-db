@@ -1,0 +1,6 @@
+# ./restore-db <db.sql.gz>
+db=$1
+echo $db
+gunzip $db
+docker exec -i matomo-compose_db_1 mysql -u matomo --password your_password matomo < db.sql
+gzip db.sql

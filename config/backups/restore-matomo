@@ -1,0 +1,6 @@
+# ./restore-matomo <backup.tar.gz>
+backup=$1
+tar -zxf $backup
+docker cp config matomo-compose_app_1:/var/www/html/config
+docker cp plugins matomo-compose_app_1:/var/www/html/plugins
+rm -rf config plugins
