@@ -1,0 +1,6 @@
+[mysqld]
+local-infile
+
+[mysqldump]
+user=root
+password=your_password
