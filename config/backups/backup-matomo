@@ -1,0 +1,4 @@
+docker cp matomo-compose_app_1:/var/www/html/config config
+docker cp matomo-compose_app_1:/var/www/html/plugins plugins
+tar -zcf backup.tar.gz plugins config 
+rm -rf config plugins

@@ -1,0 +1,7 @@
+docker exec -i matomo-compose_db_1 mysqldump \
+    --hex-blob \
+    --single-transaction \
+    --quick \
+    --lock-tables=false \
+    --password="your_password" \
+    matomo | gzip > db.sql.gz
