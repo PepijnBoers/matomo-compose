@@ -1,0 +1,5 @@
+# ./restore-db <db.sql.gz>
+db=$1
+sudo gunzip $db
+sudo docker exec -i core_db-dnt_1 mysql -p matomo < db_dnt.sql
+sudo rm db_dnt.sql
