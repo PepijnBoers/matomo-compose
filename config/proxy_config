@@ -1,0 +1,7 @@
+# Patches Matmo's config file to obtain external IP
+docker exec matomo-compose_app_1 bash -c "echo '[General]' >> /var/www/html/config/config.ini.php"
+docker exec matomo-compose_app_1 bash -c "echo 'force_ssl = 1' >> /var/www/html/config/config.ini.php"
+docker exec matomo-compose_app_1 bash -c "echo 'assume_secure_protocol = 1' >> /var/www/html/config/config.ini.php"
+docker exec matomo-compose_app_1 bash -c "echo 'proxy_client_headers[] = \"HTTP_X_FORWARDED_FOR\"' >> /var/www/html/config/config.ini.php"
+docker exec matomo-compose_app_1 bash -c "echo 'proxy_host_headers[] = \"HTTP_X_FORWARDED_HOST\"' >> /var/www/html/config/config.ini.php"
+docker exec matomo-compose_app_1 bash -c "echo '' >> /var/www/html/config/config.ini.php"
