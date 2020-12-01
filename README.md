@@ -35,4 +35,11 @@ During the GUI installation of Matomo, you're asked to connect to your database.
 * Password = #your_secret_password
 * Database Name = matomo
 
+
+Due to our nginx proxy setup, Matomo gets all its requests from the nginx server. In order to let matomo view the visitors IP, we need to add some lines to the matomo config. These lines are found in `config/proxy_config` and can be automatically inserted by running:
+
+```bash
+./config/proxy_config
+```
+
 That's it, you can now create your super user and add your first website!
